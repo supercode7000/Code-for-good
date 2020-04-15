@@ -21,10 +21,7 @@ class Form extends Component {
         console.log(this.state.data)
         let frage = this.state.data[++this.state.i].frage
         this.state.antwort = { antwort: this.state.value }
-        if (this.state.i > this.state.data.length) {
-            console.log("test")
 
-        }
 
         //console.log(this.state.dataAntwort)
 
