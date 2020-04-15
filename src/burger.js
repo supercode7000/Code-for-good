@@ -1,3 +1,7 @@
+import React, { Component } from 'react';
+import './App.css';
+
+
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
