@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import './Components/HamburgerButton';
 
+function App() {
+  return (
+    <div className="App">
 
-<div class="menu-btn">
-  <div class="menu-btn__burger"></div>
-</div>
-  <script src="assets/main.js"></script>
-
+    </div>
+  );
+}
 export default App;
