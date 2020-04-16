@@ -74,16 +74,15 @@ class Umfrage extends Component {
                     <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} />
                 </article>
                 <article style={this.state.display1 ? { display: "block" } : { display: "none" }}>
-                    {this.state.data.map((elt) => <div>
-                        <p>{elt.frage}</p>
-                        <p>{elt.antwort}</p>
-                    </div>)}
-                    <form action={this.action} enctype="text/plain">
 
-                        <label>
-
-                        </label>
-
+                    <form action="POST" data-netlify="true">
+                        {this.state.data.map((elt) => <div>
+                            <p>{elt.frage}</p>
+                            <p>{elt.antwort}</p>
+                        </div>)}
+                        <input type="hidden" value=""></input>
+                        <input type="text" name="Name"></input>
+                        <input type="text" name="Surname"></input>
                         <input type="submit" value="Senden"></input>
                     </form>
                 </article>

@@ -22,7 +22,7 @@ function App() {
 
 
     <div className="App">
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Umfrage />
       {/* <HamburgerButton /> */}
       <First />
