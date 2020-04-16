@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+body{
+    background: white;
+    height: 100vh;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 12fr);
+    grid-template-rows: repeat(12, 12fr);
+}
+.container h1{
+    color: rgba(0, 222, 172);
+    grid-column: 3/12;
+    grid-row: 3/6;
+}
+.container p{
+    line-height: 1.5;
+    display: grid;
+    color: #745cf9;
+    grid-column: 3/12;
+    grid-row: 6/7;
+    padding-top: 30px;
+}
+.container a{
+    padding-top: 30px;
+    grid-column: 3/12;
+    grid-row: 7/8;
+}
+.streifen{
+    background: rgba(0, 222, 172);
+    grid-column: 1/1;
+    grid-row: 1/12;
+    
+}
+
