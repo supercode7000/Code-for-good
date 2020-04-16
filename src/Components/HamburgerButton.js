@@ -1,16 +1,40 @@
-import React from 'react'
+// import React from 'react'
+import React, { Component } from 'react';
+import "./burger.css"
 
-
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-    if (!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
-    } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
+class HamburgerButton extends Component {
+    state = {
+        menuOpen: false
     }
-});
 
-export default 
+    menuBtn = () => {
+        if (!this.state.menuOpen) {
+            console.log("test")
+            // this.setState({ menuOpen: !this.state.menuOpen });
+
+        }
+    }
+    render() {
+        return (
+            <section>
+                <button onClick={this.menuBtn} ></button>
+            </section>
+        );
+    }
+}
+
+export default HamburgerButton;
+
+// const menuBtn = document.querySelector('.menu-btn');
+// let menuOpen = false;
+// menuBtn.addEventListener('click', () => {
+//     if (!menuOpen) {
+//         menuBtn.classList.add('open');
+//         menuOpen = true;
+//     } else {
+//         menuBtn.classList.remove('open');
+//         menuOpen = false;
+//     }
+// });
+
+// export default 
