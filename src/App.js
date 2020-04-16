@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import Umfrage from './Components/Umfrage';
-import HamburgerButton from './Components/HamburgerButton';
+//import HamburgerButton from './Components/HamburgerButton';
 
 
 
