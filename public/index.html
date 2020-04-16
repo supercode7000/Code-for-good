@@ -29,7 +29,7 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <!-- <div id="root"></div> -->
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -46,36 +46,27 @@
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
 
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
+
+  <form name="umfrage" netlify netlify-honeypot="bot-field" hidden>
+    {this.state.data.map((elt) =>
+    <div id="array" name="array">
+      <label name="frage" value={elt.frage}>{elt.frage}</label>
+      <label name="antwort" value={elt.antwort}>{elt.antwort}</label>
+    </div>)}
   </form>
 
   <div id="root"></div>
   <script type="text/babel">
 
     ReactDOM.render(
-      <form name="contact" method="post">
+      <form name="umfrage" method="post">
         <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        {this.state.data.map((elt) =>
+          <div id="array" name="array">
+            <label name="frage" value={elt.frage}>{elt.frage}</label>
+            <label name="antwort" value={elt.antwort}>{elt.antwort}</label>
+          </div>)}
+        <input type="submit" value="Senden"></input>
       </form>,
       document.getElementById("root")
     );

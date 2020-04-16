@@ -75,25 +75,15 @@ class Umfrage extends Component {
                 </article>
                 <article style={this.state.display1 ? { display: "block" } : { display: "none" }}>
 
-                    {/* <form name="umfrage" method="POST" data-netlify="true">
-
-
+                    <form name="umfrage" method="POST" data-netlify="true">
                         {this.state.data.map((elt) =>
                             <div id="array" name="array">
                                 <label name="frage" value={elt.frage}>{elt.frage}</label>
                                 <label name="antwort" value={elt.antwort}>{elt.antwort}</label>
                             </div>)}
-
-                        <input type="text" name="Name"></input>
-                        <input type="text" name="Surname"></input>
                         <input type="submit" value="Senden"></input>
-                    </form> */}
-                    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                        <input type="hidden" name="form-name" value="contact" />
-                        <input type="text" name="name" />
-                        <input type="email" name="email" />
-                        <textarea name="message"></textarea>
                     </form>
+
                 </article>
             </section>
 
