@@ -76,11 +76,14 @@ class Umfrage extends Component {
                 <article style={this.state.display1 ? { display: "block" } : { display: "none" }}>
 
                     <form action="POST" data-netlify="true">
-                        {this.state.data.map((elt) => <div>
-                            <p>{elt.frage}</p>
-                            <p>{elt.antwort}</p>
-                        </div>)}
-                        <input type="hidden" value=""></input>
+
+
+                        {this.state.data.map((elt) =>
+                            <select id="array" name="array">
+                                <label value={elt.frage}>{elt.frage}</label>
+                                <label value={elt.antwort}>{elt.antwort}</label>
+                            </select>)}
+
                         <input type="text" name="Name"></input>
                         <input type="text" name="Surname"></input>
                         <input type="submit" value="Senden"></input>
