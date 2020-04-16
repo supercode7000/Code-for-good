@@ -68,7 +68,7 @@ class Umfrage extends Component {
                 <article className="losGehts" style={this.state.display ? { display: "block" } : { display: "none" }}>
                     <h1>Los <span>geht's</span> 👋</h1>
                     <p>Hi, jetzt gleich erwarten dich ein paar Fragen, die uns helfen werden deine Anfrage besser beurteilen zu können. Bitte, nimm dir genug Zeit, alle Frage in Ruhe und vollständig auszufühlen. Bereit?</p>
-                    <button className="start btn striped-shadow violet" onClick={this.start}><span>Start</span></button>
+                    <button className="start btn striped-shadow violet st" onClick={this.start}><span>Start</span></button>
                 </article>
                 <article className="fragen" style={this.state.display0 ? { display: "none" } : { display: "block" }} >
                     <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} />

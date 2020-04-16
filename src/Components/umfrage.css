@@ -52,7 +52,6 @@
   display: inline-block;
   letter-spacing: 1px;
   position: relative;
-  font-size: 1.35rem;
   transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
   transition: opacity .3s, z-index .3s step-end, transform .3s;
   transition: opacity .3s,
@@ -63,7 +62,9 @@
   background-color: transparent;
   cursor: pointer;
 }
-
+.st{
+    font-size: 1.35rem;
+}
 .btn {
   width: 155px;
   height: 48px;
@@ -187,7 +188,7 @@ button.btn.striped-shadow:before {
   0%   {opacity: 1; top:0vh;}
   100% {opacity: 0; top:-10vh;}
 }
-@keyframes moveUp {
+@keyframes moveDown {
   0%   {opacity: 1; top:0vh;}
   100% {opacity: 0; top:-10vh;}
 }
