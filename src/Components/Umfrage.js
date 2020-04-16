@@ -75,7 +75,7 @@ class Umfrage extends Component {
                 </article>
                 <article style={this.state.display1 ? { display: "block" } : { display: "none" }}>
 
-                    <form action="POST" data-netlify="true">
+                    <form name="umfrage" method="POST" data-netlify="true">
 
 
                         {this.state.data.map((elt) =>
