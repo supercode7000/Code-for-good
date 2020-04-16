@@ -43,6 +43,7 @@ class Umfrage extends Component {
         }, () => {
             this.setState({ value: '' })
         });
+
     }
 
     before = (event) => {

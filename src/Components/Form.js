@@ -6,11 +6,15 @@ class Form extends Component {
     render() {
         return (
             <form>
-                <label>{this.props.frage}</label>
-                <input type="text" onChange={this.props.handleChange} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
-                <button onClick={this.props.before}> ⇠ </button>
-                <button onClick={this.props.next}> ⇢ </button>
-
+                <div className="up down">
+                    <label>{this.props.frage}</label>
+                    <input type="text" onChange={this.props.handleChange} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
+                </div>
+                <div className="bottom">
+                    <button onClick={this.props.before}> <i class="fas fa-angle-down"></i> </button>
+                    <button onClick={this.props.next}> <i class="fas fa-angle-up"></i> </button>
+                    <label>Sag uns wer du bist <span>und wir sagen dir was zu dir passt.</span></label>
+                </div>
             </form>
         );
     }
