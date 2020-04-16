@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .contact-box{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -16,6 +20,13 @@
 .contact-text h1{
     color: #60D7AC;
 }
+.contact-text h1 span{
+    color:#5D3EDE;
+    text-shadow: #60D7AC 2px 0 0px, #60D7AC 0 2px 0px, #60D7AC -2px 0 0px, #60D7AC 0 -2px 0px;
+}
+.contact-text p{
+    margin-top: 2vh;
+}
 .contact-input{ 
     margin-top: 42vh;
     margin-right: 10%;
@@ -32,12 +43,23 @@
     border: 2px solid white;
     padding: 10px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+.contact-input :nth-child(5){
+  height: 10vh;  
+}
+
 .contact-input ::placeholder{
     color: white;
 }
 
 .contact-input :nth-child(6){
     width: 20%;
-    margin: 10px;
     justify-self: left;
 }
