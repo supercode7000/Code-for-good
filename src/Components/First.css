@@ -1,0 +1,41 @@
+
+ *{
+     padding: 5px;
+ }
+ 
+ #Supercode-hilft{
+    display: flex;
+    height: 90vh;
+    background: rgba(0, 222, 172);
+  }
+ 
+  .main {
+    display: flex;
+    height: 90vh;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly
+  }
+  .text1 {
+    width: 30%;
+    color: #5234f9;
+    padding-left: 100px;
+  }
+  .text2 {
+    width: 20%;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  img {
+    height: 100%;
+    width: auto;
+  }
+  .span{
+
+  }
+  h1{
+      font-size: 50px;
+  }
