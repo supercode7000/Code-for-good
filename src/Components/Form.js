@@ -6,7 +6,7 @@ class Form extends Component {
     render() {
         return (
             <form>
-                <div className="up down">
+                <div className={this.props.action ? "moveUp" : "up"}>
                     <label>{this.props.frage}</label>
                     <input type="text" onChange={this.props.handleChange} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
                 </div>
