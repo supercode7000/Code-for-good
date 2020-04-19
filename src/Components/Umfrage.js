@@ -86,7 +86,7 @@ class Umfrage extends Component {
             });
         }
     }
-    handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
+    // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     render() {
 
         return (
@@ -106,7 +106,7 @@ class Umfrage extends Component {
                                 <div id="array" name="array">
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name="antwort" value={elt.antwort}>{elt.antwort}</label>
-                                    <input className="antwort" type="text" name={`antwort${i}`} value={elt.antwort} onChange={this.handleChange1} />
+                                    {/* <input className="antwort" type="text" name={`antwort${i}`} value={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)}
                         </div>
                         <div className="senden">
