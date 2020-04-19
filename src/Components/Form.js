@@ -8,7 +8,7 @@ class Form extends Component {
             <form>
                 <div className={this.props.action ? "moveUp" : "up"}>
                     <label>{this.props.frage}</label>
-                    <input type="text" onChange={this.props.handleChange} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
+                    <input type="text" onChange={this.props.handleChange} name={`antwort${this.props.i}`} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
                 </div>
                 <div className="bottom">
                     <button onClick={this.props.before}> <i class="fas fa-angle-down"></i> </button>
