@@ -99,7 +99,7 @@ class Umfrage extends Component {
                     <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} />
                 </article>
                 <article className="endForm" style={this.state.display1 ? { display: "block" } : { display: "none" }}>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} name="contact">
                         <div>
                             {this.state.data.map((elt, i) =>
                                 <div id="array" name="array">
