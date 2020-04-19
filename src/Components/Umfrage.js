@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import data from "./data"
 import Form from './Form';
 import "./umfrage.css"
-
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
 class Umfrage extends Component {
     state = {
         display: true,
@@ -59,7 +63,17 @@ class Umfrage extends Component {
 
 
     }
+    handleSubmit = e => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...this.state })
+        })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
 
+        e.preventDefault();
+    };
     before = (event) => {
         event.preventDefault()
         if (this.state.i > 0) {
@@ -71,6 +85,7 @@ class Umfrage extends Component {
             });
         }
     }
+    handleChange = e => this.setState({ [e.target.name]: e.target.value });
     render() {
 
         return (
@@ -84,12 +99,13 @@ class Umfrage extends Component {
                     <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} />
                 </article>
                 <article className="endForm" style={this.state.display1 ? { display: "block" } : { display: "none" }}>
-                    <form name="umfrage" method="POST" data-netlify="true">
+                    <form onSubmit={this.handleSubmit}>
                         <div>
-                            {this.state.data.map((elt) =>
+                            {this.state.data.map((elt, i) =>
                                 <div id="array" name="array">
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name="antwort" value={elt.antwort}>{elt.antwort}</label>
+                                    <input className="antwort" type="text" name={`antwort${i}`} value={elt.antwort} onChange={this.handleChange} />
                                 </div>)}
                         </div>
                         <div className="senden">
